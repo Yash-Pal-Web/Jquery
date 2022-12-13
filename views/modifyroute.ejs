@@ -1,0 +1,218 @@
+
+        <%- include('header'); -%>
+        <%- include('sidebar'); -%>
+
+            <main id="main" class="main">
+
+                <div class="pagetitle">
+                  <div class="titleFilter">
+                    <div class="panelTitle">
+                      <h1>Mcd</h1>                     
+                    </div>
+                    <div class="tableFilter modifyRt">
+                      <div class="filterTabs">
+                        <div class="addDataModal">
+                          <button type="button" id="addNewDriver"><a href="/admin/modifysingleroutes">Modify Route</a>
+                          </button>
+                          <button type="button" id="deleteRoute">Delete Route
+                          </button>
+                        </div>                     
+                      </div>
+                    </div>                 
+                  </div>
+                  <div class="filterBlock" style="display: none;">
+                    <div class="filterRow">
+                        <div class="filterSingle filterRole">
+                          <select name="role">
+                            <option value="" disabled selected>Role</option>
+                            <option value="">ALL</option>
+                            <option value="">DRIVER</option>
+                            <option value="">MANAGER</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle statusRole">
+                          <select name="role">
+                            <option value="" disabled selected>Status</option>
+                            <option value="">ALL</option>
+                            <option value="">ACTIVE</option>
+                            <option value="">SIGNED IN</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle routesRole">
+                          <select name="role">
+                            <option value="" disabled selected>Route</option>
+                            <option value="">ALL</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle warehouseRole">
+                          <select name="role">
+                            <option value="" disabled selected>Warehouse</option>
+                            <option value="">ALL</option>
+                            <option value="">SDC1-Newyork</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle managerRole">
+                          <select name="role">
+                            <option value="" disabled selected>Manager</option>
+                            <option value="">ALL</option>
+                            <option value="">SayWah</option>
+                          </select>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="innerPageData modifyRoutesPage">
+                    <div class="modifyroutes">
+                        <div class="routeMap">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.02912919286!2d76.69348860616982!3d30.735062644296757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff67f9527319fe!2sChandigarh!5e0!3m2!1sen!2sin!4v1670415769829!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="routeDetails">
+                            <div class="showAllDetail">
+                                <div class="row p-t-10 p-b-10"><div class="col-lg-6 col-12"><div class="row" style="font-size: 0.9rem;"><div class="col-5">Warehouse</div><div class="col-7"><span class="badge m-r-10 bg-info" style="cursor: pointer; max-width: 100%; font-size: 90%;">SAYWAH</span></div><div class="col-5">Driver</div><div class="col-7"><span class="badge m-r-10 bg-danger" style="max-width: 100%; font-size: 90%;">Unassigned</span></div><div class="col-5">Date</div><div class="col-7"><span class=" m-r-10 badge bg-secondary" style="font-size: 90%;">2022-11-29</span></div><div class="col-5">Start</div><div class="col-7">03:00</div><div class="col-5">Length (est.)</div><div class="col-7">44mi</div><div class="col-5">Duration (est.)</div><div class="col-7">1h 46m</div></div></div><div class="col-lg-6 col-12"><div class="row" style="font-size: 0.9rem;"><div class="col-5">Dropoffs</div><div class="col-7"><div class="status-bar-delivery-container" style="width: 100%; position: relative; display: inline-block;"><div class="status-bar-delivery-inner-container" style="width: 100%; height: 25px; position: relative;"><div style="float: left; background-color: rgb(238, 238, 238); width: calc(100% - 85px); height: 20px; border-radius: 3px; overflow: hidden; margin: 0px 5px;"><div class="blue-bar" style="width: 0%; height: 20px; background-color: rgb(34, 80, 252); display: inline-block;"></div><div style="width: 0%; height: 20px; background-color: rgb(252, 80, 34); display: inline-block;"></div></div><div style="text-align: center;">0/10</div></div></div></div><div class="col-5">Pickups</div><div class="col-7"><div class="status-bar-delivery-container" style="width: 100%; position: relative; display: inline-block;"><div class="status-bar-delivery-inner-container" style="width: 100%; height: 25px; position: relative;"><div style="float: left; background-color: rgb(238, 238, 238); width: calc(100% - 85px); height: 20px; border-radius: 3px; overflow: hidden; margin: 0px 5px;"><div class="blue-bar" style="width: 0%; height: 20px; background-color: rgb(34, 80, 252); display: inline-block;"></div><div style="width: 0%; height: 20px; background-color: rgb(252, 80, 34); display: inline-block;"></div></div><div style="text-align: center;">0/0</div></div></div></div><div class="col-5">Packages</div><div class="col-7"><div class="status-bar-delivery-container" style="width: 100%; position: relative; display: inline-block;"><div class="status-bar-delivery-inner-container" style="width: 100%; height: 25px; position: relative;"><div style="float: left; background-color: rgb(238, 238, 238); width: calc(100% - 85px); height: 20px; border-radius: 3px; overflow: hidden; margin: 0px 5px;"><div class="blue-bar" style="width: 0%; height: 20px; background-color: rgb(255, 193, 7); display: inline-block;"></div><div style="width: 0%; height: 20px; background-color: rgb(252, 80, 34); display: inline-block;"></div></div><div style="text-align: center;">0/10</div></div></div></div><div class="col-5">Speed</div><div class="col-7 p-l-20">0.0</div></div></div></div>
+                            </div>
+                            <div class="routeStops">
+                              <div class="stopsFilter">
+                                <div class="pagetitle">
+                                  <div class="titleFilter">
+                                    <div class="panelTitle">
+                                      <h1>Stops</h1>                     
+                                    </div>
+                                    <div class="tableFilter">
+                                      <div class="filterTabs">
+                                        <div class="tableSearchBar">
+                                          <input type="search" placeholder="Search.." value="">
+                                        </div>
+                                        <div class="filIcon btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Filter">
+                                          <i class="bi bi-filter"></i>
+                                        </div>                     
+                                      </div>
+                                    </div>                                   
+                                  </div>
+                                  <div class="filterBlock" style="display:none">
+                                    <div class="filterRow">
+                                        <div class="filterSingle filterRole">
+                                          <select name="stopStatus">
+                                            <option value="" disabled="" selected="">Status</option>
+                                            <option value="">ALL</option>
+                                            <option value="">New</option>
+                                          </select>
+                                        </div>
+                                        <div class="filterSingle statusRole">
+                                          <select name="stopType">
+                                            <option value="" disabled="" selected="">Type</option>
+                                            <option value="">ALL</option>
+                                            <option value="">Dropoff</option>
+                                          </select>
+                                        </div>
+                                        <div class="filterSingle routesRole">
+                                          <select name="signature">
+                                            <option value="" disabled="" selected="">Signature Requires</option>
+                                            <option value="">ALL</option>
+                                            <option value="">No</option>
+                                          </select>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="stopsDir">
+                                <div class="singleStops" id="stopPopup">
+                                  <div class="stopDirCount">1</div>
+                                  <h3>1015 Sector 2 Panchkula</h3>
+                                  <h4 class="stopDirName">Isha</h4>
+                                  <p>SID: 101 | 1 Package</p>
+                                  <p>Deliver by 2022-11-19 14:33</p>
+                                  <div class="stopTopInfo">
+                                    <p class="mb-0">ETA 03:23</p>
+                                    <p>13mi</p>
+                                  </div>
+                                </div>
+                                <div class="singleStops"  id="stopPopup">
+                                  <div class="stopDirCount">2</div>
+                                  <h3>993 sector 26 Panchkula</h3>
+                                  <h4 class="stopDirName">Hemant</h4>
+                                  <p>SID: 102 | 1 Package</p>
+                                  <p>Deliver by 2022-11-19 14:33</p>
+                                  <div class="stopTopInfo">
+                                    <p class="mb-0">ETA 03:23</p>
+                                    <p>13mi</p>
+                                  </div>
+                                </div>
+                                <div class="singleStops"  id="stopPopup">
+                                  <div class="stopDirCount">3</div>
+                                  <h3>DSS 181 p Sector 25 Panchkula</h3>
+                                  <h4 class="stopDirName">Rohit</h4>
+                                  <p>SID: 103 | 1 Package</p>
+                                  <p>Deliver by 2022-11-19 14:33</p>
+                                  <div class="stopTopInfo">
+                                    <p class="mb-0">ETA 03:23</p>
+                                    <p>13mi</p>
+                                  </div>
+                                </div>
+                                <div class="singleStops"  id="stopPopup">
+                                  <div class="stopDirCount">4</div>
+                                  <h3>2621 Sector 20 Chandigarh</h3>
+                                  <h4 class="stopDirName">Mohit</h4>
+                                  <p>SID: 104 | 1 Package</p>
+                                  <p>Deliver by 2022-11-19 14:33</p>
+                                  <div class="stopTopInfo">
+                                    <p class="mb-0">ETA 03:23</p>
+                                    <p>13mi</p>
+                                  </div>
+                                </div>
+                                <div class="singleStops"  id="stopPopup">
+                                  <div class="stopDirCount">5</div>
+                                  <h3>2145 Sector 21C Chandigarh</h3>
+                                  <h4 class="stopDirName">Amit</h4>
+                                  <p>SID: 105 | 1 Package</p>
+                                  <p>Deliver by 2022-11-19 14:33</p>
+                                  <div class="stopTopInfo">
+                                    <p class="mb-0">ETA 03:23</p>
+                                    <p>13mi</p>
+                                  </div>
+                                </div>
+                                <div class="singleStops"  id="stopPopup">
+                                  <div class="stopDirCount">6</div>
+                                  <h3>726 Sector 8 Chandigarh</h3>
+                                  <h4 class="stopDirName">YashPal</h4>
+                                  <p>SID: 106 | 1 Package</p>
+                                  <p>Deliver by 2022-11-19 14:33</p>
+                                  <div class="stopTopInfo">
+                                    <p class="mb-0">ETA 03:23</p>
+                                    <p>13mi</p>
+                                  </div>
+                                </div>
+                                <div class="FullsingleStops" id="FullStopDetails">
+                                  <h3 class="routeTitle">1015 Sector 2 Panchkula</h3>
+                                  <p><span class="FullStopDetailTitle">Route: </span>amittestduration10</p>
+                                  <p><span class="FullStopDetailTitle">Unit: </span>N/A</p>
+                                  <p><span class="FullStopDetailTitle">Customer Name: </span>Rohit</p>
+                                  <p><span class="FullStopDetailTitle">Customer Phone: </span>9876543212</p>
+                                  <p><span class="FullStopDetailTitle">Num Packages: </span>N/A</p>
+                                  <p><span class="FullStopDetailTitle">Status: </span>New</p>
+                                  <p><span class="FullStopDetailTitle">SID: </span>103</p>
+                                  <p><span class="FullStopDetailTitle">Time of Close: </span></p>
+                                  <p><span class="FullStopDetailTitle">Timestamps: </span></p>
+                                  <div id="closeDetailPopup"><i class="bi bi-x-lg"></i></div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>
+            </main>
+
+        <%- include('footer'); -%>
+
+                <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+                <script src="/public/assets/vendor/apexcharts/apexcharts.min.js"></script>
+                <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="/public/assets/vendor/chart.js/chart.min.js"></script>
+                <script src="/public/assets/vendor/echarts/echarts.min.js"></script>
+                <script src="/public/assets/vendor/quill/quill.min.js"></script>
+                <script src="/public/assets/vendor/simple-datatables/simple-datatables.js"></script>
+                <script src="/public/assets/vendor/tinymce/tinymce.min.js"></script>
+                <script src="/public/assets/vendor/php-email-form/validate.js"></script>
+                <script src="/public/assets/js/main.js"></script>
+    </body>
+</html>

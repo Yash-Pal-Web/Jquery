@@ -1,0 +1,589 @@
+
+        <%- include('header'); -%>
+        <%- include('sidebar'); -%>
+
+            <main id="main" class="main">
+
+                <div class="pagetitle">
+                  <div class="titleFilter">
+                    <div class="panelTitle">
+                      <h1>Drivers</h1>                     
+                    </div>
+                    <div class="tableFilter">
+                      <div class="filterTabs">
+                        <div class="tableSearchBar">
+                          <input type="search" placeholder="Search.." value="">
+                        </div>
+                        <div class="filIcon btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Filter">
+                          <i class="bi bi-filter"></i>
+                        </div>  
+                        <div class="addDataModal">
+                          <button type="button" id="addNewDriver"><a href="/admin/adddriver">Add Driver <i class="fa fa-plus" aria-hidden="true"></i></a>
+                          </button>
+                        </div>                     
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filterBlock" style="display: none;">
+                    <div class="filterRow">
+                        <div class="filterSingle filterRole">
+                          <select name="role">
+                            <option value="" disabled selected>Role</option>
+                            <option value="">ALL</option>
+                            <option value="">DRIVER</option>
+                            <option value="">MANAGER</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle statusRole">
+                          <select name="role">
+                            <option value="" disabled selected>Status</option>
+                            <option value="">ALL</option>
+                            <option value="">ACTIVE</option>
+                            <option value="">SIGNED IN</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle routesRole">
+                          <select name="role">
+                            <option value="" disabled selected>Route</option>
+                            <option value="">ALL</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle warehouseRole">
+                          <select name="role">
+                            <option value="" disabled selected>Warehouse</option>
+                            <option value="">ALL</option>
+                            <option value="">SDC1-Newyork</option>
+                          </select>
+                        </div>
+                        <div class="filterSingle managerRole">
+                          <select name="role">
+                            <option value="" disabled selected>Manager</option>
+                            <option value="">ALL</option>
+                            <option value="">SayWah</option>
+                          </select>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="innerPageData">
+                  <table id="tableDriver" class="table" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Rating</th>
+                            <th>Success Rate</th>
+                            <th>Approve/Unapprove</th>
+                            <th>Route</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                            <td><a href="/admin/myprofile">
+                              <div class="driverPDeatil">
+                                <div class="driverImg">
+                                  <img src="/public/assets/img/profile-img.jpg">
+                                </div>
+                                <div class="driverName">Connor<span>connor@gmail.com</span>
+                                <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                                </div>
+                              </div></a>
+                            </td>
+                            <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                            <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778</td>
+                            <td class="driverStatus"><span>Active</span></td>
+                            <td>
+                              <div class="driverRates">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                              </div>
+                            </td>
+                            <td class="driverRatingCircle greenPrograss">
+                              <div class="successProgress">          
+                                <div class="progress">
+                                  <div class="barOverflow">
+                                    <div class="bar"></div>
+                                  </div>
+                                  <span>85</span>%
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="approveReq">
+                                <label class="switch">
+                                  <input type="checkbox" id="togBtn">
+                                  <div class="slider round">
+                                   <!--ADDED HTML -->
+                                   <span class="on">Yes</span>
+                                   <span class="off">No</span>
+                                   <!--END-->
+                                  </div>
+                                 </label>
+                              </div>
+                            </td>
+                            <td class="driverRoute"><span>Not on Route</span></td>
+                            <td class="formAction">
+                              <div class="actionBtn">
+                                <ul>
+                                  <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                                  <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                                  <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                                </ul>
+                              </div>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                          <td><a href="/admin/myprofile">
+                            <div class="driverPDeatil">
+                              <div class="driverImg">
+                                <img src="/public/assets/img/profile-img.jpg">
+                              </div>
+                              <div class="driverName">Kyle<span>kyle@gmail.com</span>
+                                <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                              </div>
+                            </div></a>
+                          </td>
+                          <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                          <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778</td>
+                          <td class="driverStatus"><span>Active</span></td>
+                          <td>
+                            <div class="driverRates">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                          </td>
+                          <td class="driverRatingCircle yellowProgress">
+                            <div class="successProgress">          
+                              <div class="progress">
+                                <div class="barOverflow">
+                                  <div class="bar"></div>
+                                </div>
+                                <span>54</span>%
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="approveReq">
+                              <label class="switch">
+                                <input type="checkbox" id="togBtn">
+                                <div class="slider round">
+                                 <!--ADDED HTML -->
+                                 <span class="on">Yes</span>
+                                 <span class="off">No</span>
+                                 <!--END-->
+                                </div>
+                               </label>
+                            </div>
+                          </td>
+                          <td class="driverRoute"><span>Not on Route</span></td>
+                          <td class="formAction">
+                            <div class="actionBtn">
+                              <ul>
+                                <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                                <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                                <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                              </ul>
+                            </div>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                        <td><a href="/admin/myprofile">
+                          <div class="driverPDeatil">
+                            <div class="driverImg">
+                              <img src="/public/assets/img/profile-img.jpg">
+                            </div>
+                            <div class="driverName">Damian<span>damian@gmail.com</span>
+                              <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                            </div>
+                          </div></a>
+                        </td>
+                        <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                        <td class="personalDetail"><i class="bi bi-telephone"></i> 9728747509</td>
+                        <td class="driverStatus"><span>Active</span></td>
+                        <td>
+                          <div class="driverRates">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                          </div>
+                        </td>
+                        <td class="driverRatingCircle yellowProgress">
+                          <div class="successProgress">          
+                            <div class="progress">
+                              <div class="barOverflow">
+                                <div class="bar"></div>
+                              </div>
+                              <span>40</span>%
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="approveReq">
+                            <label class="switch">
+                              <input type="checkbox" id="togBtn">
+                              <div class="slider round">
+                               <!--ADDED HTML -->
+                               <span class="on">Yes</span>
+                               <span class="off">No</span>
+                               <!--END-->
+                              </div>
+                             </label>
+                          </div>
+                        </td>
+                        <td class="driverRoute"><span>Not on Route</span></td>
+                        <td class="formAction">
+                          <div class="actionBtn">
+                            <ul>
+                              <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                              <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                              <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                            </ul>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                      <td><a href="/admin/myprofile">
+                        <div class="driverPDeatil">
+                          <div class="driverImg">
+                            <img src="/public/assets/img/profile-img.jpg">
+                          </div>
+                          <div class="driverName">Jake<span>jake@gmail.com</span>
+                            <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                          </div>
+                        </div></a>
+                      </td>
+                      <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                      <td class="personalDetail"><i class="bi bi-telephone"></i> 9725687778</td>
+                      <td class="driverStatus"><span>Active</span></td>
+                      <td>
+                        <div class="driverRates">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                      </td>
+                      <td class="driverRatingCircle redProgress">
+                        <div class="successProgress">          
+                          <div class="progress">
+                            <div class="barOverflow">
+                              <div class="bar"></div>
+                            </div>
+                            <span>15</span>%
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="approveReq">
+                          <label class="switch">
+                            <input type="checkbox" id="togBtn">
+                            <div class="slider round">
+                             <!--ADDED HTML -->
+                             <span class="on">Yes</span>
+                             <span class="off">No</span>
+                             <!--END-->
+                            </div>
+                           </label>
+                        </div>
+                      </td>
+                      <td class="driverRoute"><span>Not on Route</span></td>
+                      <td class="formAction">
+                        <div class="actionBtn">
+                          <ul>
+                            <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                            <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                            <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                          </ul>
+                        </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                    <td><a href="/admin/myprofile">
+                      <div class="driverPDeatil">
+                        <div class="driverImg">
+                          <img src="/public/assets/img/profile-img.jpg">
+                        </div>
+                        <div class="driverName">Daniel<span>daniel@gmail.com</span>
+                          <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                        </div>
+                      </div></a>
+                    </td>
+                    <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                    <td class="personalDetail"><i class="bi bi-telephone"></i> 9586987778</td>
+                    <td class="driverStatus"><span>Active</span></td>
+                    <td>
+                      <div class="driverRates">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                      </div>
+                    </td>
+                    <td class="driverRatingCircle greenPrograss">
+                      <div class="successProgress">          
+                        <div class="progress">
+                          <div class="barOverflow">
+                            <div class="bar"></div>
+                          </div>
+                          <span>81.5</span>%
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="approveReq">
+                        <label class="switch">
+                          <input type="checkbox" id="togBtn">
+                          <div class="slider round">
+                           <!--ADDED HTML -->
+                           <span class="on">Yes</span>
+                           <span class="off">No</span>
+                           <!--END-->
+                          </div>
+                         </label>
+                      </div>
+                    </td>
+                    <td class="driverRoute"><span>Not on Route</span></td>
+                    <td class="formAction">
+                      <div class="actionBtn">
+                        <ul>
+                          <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                          <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                          <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                        </ul>
+                      </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                  <td><a href="/admin/myprofile">
+                    <div class="driverPDeatil">
+                      <div class="driverImg">
+                        <img src="/public/assets/img/profile-img.jpg">
+                      </div>
+                      <div class="driverName">Thomas<span>thomas@gmail.com</span>
+                        <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                      </div>
+                    </div></a>
+                  </td>
+                  <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                  <td class="personalDetail"><i class="bi bi-telephone"></i> 9728783749</td>
+                  <td class="driverStatus"><span>Active</span></td>
+                  <td>
+                    <div class="driverRates">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                    </div>
+                  </td>
+                  <td class="driverRatingCircle redProgress">
+                    <div class="successProgress">          
+                      <div class="progress">
+                        <div class="barOverflow">
+                          <div class="bar"></div>
+                        </div>
+                        <span>25.5</span>%
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="approveReq">
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">Yes</span>
+                         <span class="off">No</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                    </div>
+                  </td>
+                  <td class="driverRoute"><span>Not on Route</span></td>
+                  <td class="formAction">
+                    <div class="actionBtn">
+                      <ul>
+                        <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                        <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                        <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                      </ul>
+                    </div>
+                  </td>
+              </tr>
+                <tr>
+                  <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                  <td><a href="/admin/myprofile">
+                    <div class="driverPDeatil">
+                      <div class="driverImg">
+                        <img src="/public/assets/img/profile-img.jpg">
+                      </div>
+                      <div class="driverName">Sophia<span>sophia@gmail.com</span>
+                        <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                      </div>
+                    </div></a>
+                  </td>
+                  <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                  <td class="personalDetail"><i class="bi bi-telephone"></i> 9728557778</td>
+                  <td class="driverStatus"><span>Active</span></td>
+                  <td>
+                    <div class="driverRates">
+                      <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                    </div>
+                  </td>
+                  <td class="driverRatingCircle yellowProgress">
+                    <div class="successProgress">          
+                      <div class="progress">
+                        <div class="barOverflow">
+                          <div class="bar"></div>
+                        </div>
+                        <span>49.5</span>%
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="approveReq">
+                      <label class="switch">
+                        <input type="checkbox" id="togBtn">
+                        <div class="slider round">
+                         <!--ADDED HTML -->
+                         <span class="on">Yes</span>
+                         <span class="off">No</span>
+                         <!--END-->
+                        </div>
+                       </label>
+                    </div>
+                  </td>
+                  <td class="driverRoute"><span>Not on Route</span></td>
+                  <td class="formAction">
+                    <div class="actionBtn">
+                      <ul>
+                        <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                        <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                        <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                      </ul>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+                <td><a href="/admin/myprofile">
+                  <div class="driverPDeatil">
+                    <div class="driverImg">
+                      <img src="/public/assets/img/profile-img.jpg">
+                    </div>
+                    <div class="driverName">Lauren<span>lauren@gmail.com</span>
+                      <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                    </div>
+                  </div></a>
+                </td>
+                <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+                <td class="personalDetail"><i class="bi bi-telephone"></i> 6728787778</td>
+                <td class="driverStatus"><span>Active</span></td>
+                <td>
+                  <div class="driverRates">
+                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  </div>
+                </td>
+                <td class="driverRatingCircle greenPrograss">
+                  <div class="successProgress">          
+                    <div class="progress">
+                      <div class="barOverflow">
+                        <div class="bar"></div>
+                      </div>
+                      <span>85.5</span>%
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="approveReq">
+                    <label class="switch">
+                      <input type="checkbox" id="togBtn">
+                      <div class="slider round">
+                       <!--ADDED HTML -->
+                       <span class="on">Yes</span>
+                       <span class="off">No</span>
+                       <!--END-->
+                      </div>
+                     </label>
+                  </div>
+                </td>
+                <td class="driverRoute"><span>Not on Route</span></td>
+                <td class="formAction">
+                  <div class="actionBtn">
+                    <ul>
+                      <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                      <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                      <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                    </ul>
+                  </div>
+                </td>
+            </tr>
+          <tr>
+            <td><input type="checkbox" id="selectOne" name="selectRow" value=""></td>
+            <td>
+              <div class="driverPDeatil">
+                <div class="driverImg">
+                  <img src="/public/assets/img/profile-img.jpg">
+                </div>
+                <div class="driverName">Roy<span>roy@gmail.com</span>
+                  <div class="driverID"><i class="bi bi-stickies"></i> 61d00f12-955</div>
+                </div>
+              </div>
+            </td>
+            <!-- <td class="personalDetail"><i class="bi bi-telephone"></i> 9728787778 <div class="emailAd"><i class="bi bi-envelope"></i> ratheeamit78@gmail.com</div></td> -->
+            <td class="personalDetail"><i class="bi bi-telephone"></i> 8828789048</td>
+            <td class="driverStatus"><span>Active</span></td>
+            <td>
+              <div class="driverRates">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+              </div>
+            </td>
+            <td class="driverRatingCircle greenPrograss">
+              <div class="successProgress">          
+                <div class="progress">
+                  <div class="barOverflow">
+                    <div class="bar"></div>
+                  </div>
+                  <span>98.5</span>%
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="approveReq">
+                <label class="switch">
+                  <input type="checkbox" id="togBtn">
+                  <div class="slider round">
+                   <!--ADDED HTML -->
+                   <span class="on">Yes</span>
+                   <span class="off">No</span>
+                   <!--END-->
+                  </div>
+                 </label>
+              </div>
+            </td>
+            <td class="driverRoute"><span>Not on Route</span></td>
+            <td class="formAction">
+              <div class="actionBtn">
+                <ul>
+                  <li class="editList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit"><a href="javascript:void(0)"><i class="bi bi-pencil-square"></i></a></li>
+                  <li class="viewList" data-bs-toggle="tooltip" data-bs-placement="bottom" title="View"><a href="javascript:void(0)"><i class="bi bi-eye-fill"></i></a></li>
+                  <li class="delList"  data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete"><a href="javascript:void(0)"><i class="bi bi-trash3-fill"></i></a></li>
+                </ul>
+              </div>
+            </td>
+        </tr>              
+                        <tr>
+                    </tfoot>
+                </table>
+                </div>
+            </main>
+
+        <%- include('footer'); -%>
+
+                <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+                <script src="/public/assets/vendor/apexcharts/apexcharts.min.js"></script>
+                <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="/public/assets/vendor/chart.js/chart.min.js"></script>
+                <script src="/public/assets/vendor/echarts/echarts.min.js"></script>
+                <script src="/public/assets/vendor/quill/quill.min.js"></script>
+                <script src="/public/assets/vendor/simple-datatables/simple-datatables.js"></script>
+                <script src="/public/assets/vendor/tinymce/tinymce.min.js"></script>
+                <script src="/public/assets/vendor/php-email-form/validate.js"></script>
+                <script src="/public/assets/js/main.js"></script>
+    </body>
+</html>

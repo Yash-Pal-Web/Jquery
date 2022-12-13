@@ -1,0 +1,72 @@
+
+        <%- include('header'); -%>
+        <%- include('sidebar'); -%>
+
+            <main id="main" class="main">
+
+                <div class="pagetitle">
+                  <div class="titleFilter">
+                    <div class="panelTitle">
+                      <h1>Add Driver</h1>
+                      <!-- <div class="addDataModal">
+                        <button type="button" id="addNewDriver">Add Driver <i class="fa fa-plus" aria-hidden="true"></i>
+                        </button>
+                      </div> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="innerPageDataHelp">
+                    <div class="addDriverData">
+                        <div class="form_field">
+                            <label>Name</label>
+                            <input type="text" placeholder="" value="" name="name">
+                        </div>
+                        <div class="form_field">
+                            <label>Email</label>
+                            <input type="text" placeholder="" value="" name="email">
+                        </div>
+                        <div class="form_field">
+                            <label>Phone</label>
+                            <input type="text" placeholder="" value="" name="phone">
+                        </div>
+                        <div class="form_field">
+                            <label>Role</label>
+                            <input type="text" placeholder="" value="Driver" name="eid" class="disbaled_input" disabled>
+                        </div>
+                        <div class="form_field">
+                            <label>Select Warehouse</label>
+                            <select name="driverRole">
+                                <option value="" selected disabled></option>
+                                <option value="">Leave Unassigned</option>
+                                <option value="">SDC1-Newyork</option>
+                                <option value="">SAYWAH</option>
+                            </select>
+                        </div>
+                        <div class="addDriverBtns">
+                            <button type="button" id="primaryBtn" class="btn">Add & Send Invitation</button>
+                            <button type="button" id="cancelBtn" class="btn">Cancel</button>
+                        </div>
+                    </div>
+                    <div class="helpPage">
+                        <h2>Help</h2>
+                        <div class="helpArt">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        <%- include('footer'); -%>
+
+                <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+                <script src="/public/assets/vendor/apexcharts/apexcharts.min.js"></script>
+                <script src="/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="/public/assets/vendor/chart.js/chart.min.js"></script>
+                <script src="/public/assets/vendor/echarts/echarts.min.js"></script>
+                <script src="/public/assets/vendor/quill/quill.min.js"></script>
+                <script src="/public/assets/vendor/simple-datatables/simple-datatables.js"></script>
+                <script src="/public/assets/vendor/tinymce/tinymce.min.js"></script>
+                <script src="/public/assets/vendor/php-email-form/validate.js"></script>
+                <script src="/public/assets/js/main.js"></script>
+    </body>
+</html>
